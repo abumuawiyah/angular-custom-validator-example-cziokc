@@ -1,0 +1,22 @@
+<h3>Reactive Forms Validator Example</h3>
+<br />
+
+<label
+  >We have created two validators using slightly different approaches that
+  validate if the input is equal to "A" or not.</label
+>
+<br /><br />
+
+<label
+  >Doesn't work because the method is not executed which will return the custom
+  validator function.</label
+><br />
+<input type="text" [formControl]="wrongOnlyA" />
+<br /><br />
+
+<label>Works because the method is executed.</label><br />
+<input type="text" [formControl]="correctOnlyA" />
+test{{ correctOnlyA?.errors?.NOT_A }} <br /><br />
+
+<label>Works because the validator function is directly exported.</label><br />
+<input type="text" [formControl]="onlyB" />
